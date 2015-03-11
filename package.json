@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.12.2",
     "morgan": "^1.5.1",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "underscore": "^1.8.2"
   }
 }
