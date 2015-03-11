@@ -57,3 +57,20 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tweet-content {
+  margin-bottom: 15px;
+}
+
+.whole-tweet {
+  background-color: lightgrey; 
+}
+
+.darth {
+  padding: 10px;
+}
