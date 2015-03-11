@@ -9,5 +9,9 @@ var server = app.listen(3000, function(){
 });
 
 app.get ("/" , function (req, res) {
-	res.send( 'Welcome!' )
+	res.send( 'Welcome to the Home Page!' )
+})
+
+app.get ("/news" , function (req, res) {
+	res.send( 'Welcome to the News Page!' )
 })
