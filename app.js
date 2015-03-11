@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var logger = require('morgan');
+var swig = require('swig');
 
 app.use( logger('dev') );
 
@@ -17,8 +18,8 @@ app.get ("/news" , function (req, res) {
 	res.send( 'Welcome to the News Page!' );
 });
 
-app.engine(‘html’ , swig.renderFile);
-app.set(‘view engine’ , ‘html’);
-app.set(‘views’,  __dirname + ‘/views’);
+app.engine('html' , swig.renderFile);
+app.set('view engine' , 'html');
+app.set('views',  __dirname + '/views');
 
 swig.setDefaults({ cache: false });
