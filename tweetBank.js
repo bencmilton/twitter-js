@@ -5,7 +5,7 @@ var data = [];
 var add = function (name, text) {
   var nameObj = { name: name, text: text};
   nameObj.id = data.length;
-  data.unshift(nameObj);
+  data.push(nameObj);
 };
 
 var list = function () {
