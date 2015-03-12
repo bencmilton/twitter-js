@@ -79,4 +79,33 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   </body>
+
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  // Load the socket.io library above, then connect to the server.
+  // Because the socket.io server is being run on the same server as your 
+  // Express instance, you can connect() without any arguments.
+  var socket = io.connect();
+
+  // When 'new_tweet' events are fired, do something with the packaged tweet
+  socket.on('new_tweet', function (tweet) { 
+    console.log(tweet);
+    $("#masterRow").append(
+          
+          '<div class="col-md-1">
+            <img class="img-responsive darth" src="http://cdn.gunaxin.com/wp-content/uploads/2011/07/darth-vader.thumbnail.jpg" />
+          </div>
+          <div class="col-md-11 tweet-content">
+            <ul class="inner-ul">
+              <li><a href="/users/'+tweet.name+'><strong>'+tweet.name+'</strong></a></li>
+              <li>'+tweet.text+'</li>
+              <li><a href="#">Re-tweet</a> | <a href="/users/{{tweet.name}}/tweets/'+tweet+'>Go To Tweet</a></li>
+            </ul>
+
+          </div>'
+
+      );
+  }); 
+
+</script>
 </html>
