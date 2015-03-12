@@ -30,9 +30,9 @@ module.exports = function (io) {
 	  var text = req.body.text;
 	  tweetBank.add(name, text);
 
-	io.sockets.emit('new_tweet', {  name: name, text: text });
+	  io.sockets.emit('new_tweet', {  name: name, text: text });
 
-	  //res.redirect('/');
+	  res.redirect('/');
 	});
 	  return router;
 };
