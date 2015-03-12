@@ -32,7 +32,7 @@ module.exports = function (io) {
 
 	io.sockets.emit('new_tweet', {  name: name, text: text });
 
-	  res.redirect('/');
+	  //res.redirect('/');
 	});
 	  return router;
 };

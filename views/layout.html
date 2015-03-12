@@ -90,20 +90,7 @@
   // When 'new_tweet' events are fired, do something with the packaged tweet
   socket.on('new_tweet', function (tweet) { 
     console.log(tweet);
-    $("#masterRow").append(
-          
-          '<div class="col-md-1">
-            <img class="img-responsive darth" src="http://cdn.gunaxin.com/wp-content/uploads/2011/07/darth-vader.thumbnail.jpg" />
-          </div>
-          <div class="col-md-11 tweet-content">
-            <ul class="inner-ul">
-              <li><a href="/users/'+tweet.name+'><strong>'+tweet.name+'</strong></a></li>
-              <li>'+tweet.text+'</li>
-              <li><a href="#">Re-tweet</a> | <a href="/users/{{tweet.name}}/tweets/'+tweet+'>Go To Tweet</a></li>
-            </ul>
-
-          </div>'
-
+    $("#masterRow:last-child").append("<div class='col-md-1'><img class='img-responsive darth' src='http://cdn.gunaxin.com/wp-content/uploads/2011/07/darth-vader.thumbnail.jpg' /></div><div class='col-md-11 tweet-content'><ul class='inner-ul'><li><a href='/users/'" + tweet.name + "'><strong>" + tweet.name + "</strong></a></li><li>" + tweet.text + "</li><li><a href='#''>Re-tweet</a> | <a href='/users/'" + tweet.name + "'/tweets/'" + tweet + "''>Go To Tweet</a></li></ul></div>"
       );
   }); 
 
